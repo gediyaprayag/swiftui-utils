@@ -1,0 +1,7 @@
+let player = AVPlayer(url: url)
+let playerController = AVPlayerViewController()
+playerController.player = player
+let viewController = UIApplication.shared.windows.first!.rootViewController!
+viewController.present(playerController, animated: true) {
+    player.play()
+}
